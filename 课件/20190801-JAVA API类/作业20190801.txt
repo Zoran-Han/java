@@ -1,0 +1,9 @@
+1、已知一段文本，屏蔽文本中敏感词，敏感词以***代替。       
+
+
+2、定义工具类，定义方法实现四舍五入功能，可以指定精确位数，只考虑小数位。
+
+3、把前面的格式转换成后面的格式。   
+
+   ttt5yjd-jdd4yh      tttyyyyyjd@jddyyyyh   
+   Hsdkf4sd-fsd3tr    Hsdkfssssd@fsd3tttr
