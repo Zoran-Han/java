@@ -13,19 +13,33 @@ import java.util.regex.Pattern;
  */
 
 public class TestSensitive {
+
+    public String method(String string){
+        String[] str = {"丢","批"};
+
+        for (String s :str){
+            string = string.replace(s,"*");
+            break;
+        }
+        System.out.println(string);
+        return string;
+    }
     //int index1 = str.indexOf("cdf");//返回子串的第一个字符的下标
     public static void main(String[] args) {
+        TestSensitive te = new TestSensitive();
         String str1 = "一个男的对女的说：今晚跟我去看电影，那女的直接来一句，我丢！你也不看你那批样子";
         String str2 = "[丢批]";
-        System.out.println("屏蔽前："+str1);
+        
+       /* System.out.println("屏蔽前："+str1);
         //创建正则表达式对象
         Pattern p = Pattern.compile(str2);
         Matcher m = p.matcher(str1);
         //将敏感词用*替换，并去除空格
         str1 = m.replaceAll("*").trim();
-
         System.out.println("屏蔽后："+str1);
 
+*/
+        te.method(str1);
         }
     }
 
