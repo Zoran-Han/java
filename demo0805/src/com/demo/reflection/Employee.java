@@ -1,18 +1,29 @@
 package com.demo.reflection;
 
 /**
- * 资源类
- * @author Teacher
- * @version 1.0.0
- * @createTime 2019年08月05日 15:05:59
+ * @ClassName Employee
+ * @Description TODO
+ * @Author Hzrobo
+ * @CreateDate 2019年08月05日  15:05:43
+ * @Version 1.0.0
  */
+
 public class Employee {
+    /**
+     * 姓名
+     */
+    public String name;
+    /**
+     * 性别
+     */
+    private String gender;
+    /**
+     * 年龄
+     */
+    private int age;
 
-    public String name; //姓名
-    private String gender; //性别
-    private int age; //年龄
+    public Employee(){
 
-    public Employee() {
     }
 
     public Employee(String name, String gender, int age) {
@@ -46,7 +57,7 @@ public class Employee {
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return name+" "+gender+" "+age;
     }
 }
