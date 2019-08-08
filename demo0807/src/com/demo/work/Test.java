@@ -21,9 +21,11 @@ public class Test {
     public static void main(String[] args){
 
         try {
-            Factory factory = new Factory();
-            Person person = factory.getInstance("Student");
-            Person person1 = factory.getInstance("Boss");
+            //获得工厂对象
+            Factory factory = Factory.getInstance();
+            //获取接口类实现对象
+            Person person = factory.get("com.demo.work.impl.Student");
+            Person person1 = factory.get("com.demo.work.impl.Boss");
             person.eat();
             person.sleep();
             person1.eat();
