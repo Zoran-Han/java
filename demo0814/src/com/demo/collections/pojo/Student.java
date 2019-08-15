@@ -3,29 +3,23 @@ package com.demo.collections.pojo;
 import java.io.Serializable;
 
 /**
- * 学生类
- * @author Teacher
- * @version 1.0.0
- * @createTime 2019年08月14日 16:46:07
+ * @ClassName Student
+ * @Description TODO
+ * @Author Hzrobo
+ * @CreateDate 2019年08月14日  16:45:42
+ * @Version 1.0.0
  */
-public class Student implements Serializable, Comparable<Student> {
 
-    private String number; //学号
-    private String name; //姓名
+public class Student implements Serializable ,Comparable<Student>{
 
-    public Student() {
+    private String name;
+    private String number;
+    public Student(){
+
     }
 
-    public Student(String number, String name) {
-        this.number = number;
+    public Student(String name, String number) {
         this.name = name;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -35,6 +29,14 @@ public class Student implements Serializable, Comparable<Student> {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     @Override

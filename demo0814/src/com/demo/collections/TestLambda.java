@@ -1,38 +1,31 @@
 package com.demo.collections;
 
-interface ICalculator {
-    public int sum(int x, int y);
-    //public int sum(int x, int y, int z);
+
+
+interface ICalculator{
+    public int sum(int x,int y);
+
     @Override
     public boolean equals(Object o);
 
     @Override
     public String toString();
 
-    @Override
-    public int hashCode();
+    //public float substract(int x);
+    //public int sum(int x,int y,int z);
 }
-
-class CalculatorImpl implements  ICalculator {
-
-    @Override
-    public int sum(int x, int y) {
-        return 0;
-    }
-}
-
 /**
- * @author Teacher
- * @version 1.0.0
- * @createTime 2019年08月14日 17:36:26
+ * @ClassName TestLambda
+ * @Description TODO
+ * @Author Hzrobo
+ * @CreateDate 2019年08月14日  17:36:14
+ * @Version 1.0.0
  */
-public class TestLambda {
+
+public class TestLambda  {
 
     public static void main(String[] args) {
-        ICalculator ical = (x, y) -> x+y; //目标类型必须是接口，且只能有一个自定义抽象方法
-        System.out.println(ical.sum(10, 20));
-        ICalculator ic = new CalculatorImpl();
-        Object o = ic;
+        ICalculator ical = (x,y) ->x+y;   //Lambda目标类型必须是接口,且接口中只能有自定义的一个抽象方法,但是重写方法可以
+        System.out.println(ical.sum(10,20));
     }
-
 }

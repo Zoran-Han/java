@@ -3,17 +3,21 @@ package com.demo.collections.pojo;
 import java.io.Serializable;
 
 /**
+ * @ClassName Employee
  * 职员类
- * @author Teacher
- * @version 1.0.0
- * @createTime 2019年08月14日 17:00:45
+ * @Description TODO
+ * @Author Hzrobo
+ * @CreateDate 2019年08月14日  17:00:22
+ * @Version 1.0.0
  */
+
 public class Employee implements Serializable {
 
-    private String name; //姓名
-    private Integer salary; //工资
+    private String name;
+    private Integer salary;//工资
 
     public Employee() {
+
     }
 
     public Employee(String name, Integer salary) {

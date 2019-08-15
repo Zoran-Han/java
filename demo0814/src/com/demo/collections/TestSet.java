@@ -1,97 +1,103 @@
 package com.demo.collections;
 
-import com.demo.work.pojo.Company;
+
 
 import java.util.*;
 
 /**
- * 测试应用规则集的3种集合
- * @author Teacher
- * @version 1.0.0
- * @createTime 2019年08月14日 16:03:04
+ * @ClassName TestSet
+ * @Description TODO
+ * @Author Hzrobo
+ * @CreateDate 2019年08月14日  16:11:33
+ * @Version 1.0.0
  */
+
 public class TestSet {
 
     public static void main(String[] args) {
-        //散列集
-        /*Set<String> hashSet = new HashSet<>();
-        hashSet.add("Tom");
-        //hashSet.add(100); //编译失败，使用泛型限定元素只能String型*/
+       /*
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("你好 奔驰");
+        hashSet.add(100);//编译报错，泛型指定了类型只能是String型*/
         //创建散列集
-        Set hashSet = new HashSet(); //插入元素不保证顺序（无序），获取元素按照一定规则获取。
+       Set hashSet = new HashSet(); //元素插入不保证顺序（无序）,获取元素按照一定规则获取
         //添加元素
-        /*hashSet.add("Tom");
+       /* hashSet.add("Tom");
         hashSet.add(100);
-        hashSet.add(new Company("中软国际"));*/
+        hashSet.add("hello");*/
+
         hashSet.add(1);
         hashSet.add(2);
         hashSet.add(3);
         hashSet.add(4);
         hashSet.add(5);
         hashSet.add(8);
-        hashSet.add(7);
         hashSet.add(6);
-        hashSet.add(10);
+        hashSet.add(7);
         hashSet.add(20);
-        hashSet.add(30);
-        hashSet.add(40);
         hashSet.add(50);
         hashSet.add(80);
-        hashSet.add(70);
-        hashSet.add(60);
-        //遍历集合
-        for(Object o: hashSet) {
-            System.out.print(o);
+        hashSet.add(11);
+        hashSet.add(22);
+        hashSet.add(33);
+        hashSet.add(77);
+        hashSet.add(9);
+
+        for(Object o :hashSet){
+            System.out.print(o+" ");
             System.out.print("\t");
         }
         System.out.println();
-        /*//获得迭代器
+
+        //迭代器
         Iterator it = hashSet.iterator();
-        //使用迭代器遍历集合
-        while(it.hasNext()) {
+        //使用迭代器遍历数组
+        while (it.hasNext()){
             System.out.print(it.next());
             System.out.print("\t");
         }
-        System.out.println();*/
+        System.out.println();
 
-        //创建链式散列集
-        Set linkedHashSet = new LinkedHashSet(); //插入元素保证顺序（元素的插入先后为序）
-        linkedHashSet.add(1);
-        linkedHashSet.add(2);
-        linkedHashSet.add(3);
-        linkedHashSet.add(4);
-        linkedHashSet.add(5);
-        linkedHashSet.add(8);
-        linkedHashSet.add(7);
-        linkedHashSet.add(6);
-        linkedHashSet.add(10);
-        linkedHashSet.add(20);
-        linkedHashSet.add(30);
-        linkedHashSet.add(40);
-        linkedHashSet.add(50);
-        linkedHashSet.add(80);
-        linkedHashSet.add(70);
-        linkedHashSet.add(60);
+        //链式散列集
+        Set linkHashSet = new LinkedHashSet();//插入元素保证顺序（元素插入的先后顺序）
+        linkHashSet.add(1);
+        linkHashSet.add(2);
+        linkHashSet.add(3);
+        linkHashSet.add(4);
+        linkHashSet.add(5);
+        linkHashSet.add(8);
+        linkHashSet.add(6);
+        linkHashSet.add(7);
+        linkHashSet.add(20);
+        linkHashSet.add(50);
+        linkHashSet.add(80);
+        linkHashSet.add(11);
+        linkHashSet.add(22);
+        linkHashSet.add(33);
+        linkHashSet.add(77);
+        linkHashSet.add(9);
         //遍历集合
-        for(Object o: linkedHashSet) {
+        for (Object o : linkHashSet){
             System.out.print(o);
             System.out.print("\t");
         }
-        System.out.println();
+        System.out.println();//  输出结果：1  2	3	4	5	8	6	7	20	50	80	11	22	33	77	9
 
-        //创建树型集
-        Set treeSet = new TreeSet(hashSet); //插入元素时，以自然顺序对元素进行排序。
-        treeSet.add(21);
+
+        //创建树形集
+        TreeSet treeSet = new TreeSet(hashSet); //插入元素时，以自然顺序对元素进行排序
+        treeSet.add(25);
         treeSet.add(0);
         treeSet.add(-10);
-        /*treeSet.add("Tom"); //运行时报错，原因：不能与整型数值进行比较
-        treeSet.add(null); //运行时报错  */
+       /* treeSet.add("tom"); //运行时报错，原因：不能喝整型值进行比较
+        treeSet.add(null);*/
         //遍历集合
-        for(Object o: treeSet) {
+        for (Object o :treeSet){
             System.out.print(o);
             System.out.print("\t");
         }
         System.out.println();
     }
+
 
 }
